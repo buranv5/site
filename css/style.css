@@ -1,0 +1,137 @@
+a{
+    color:blueviolet;
+}
+
+p{
+    line-height: 100%;
+    color: aliceblue;
+}
+
+th{
+    color: aliceblue;
+}
+
+.paragraph1{
+    background-color: antiquewhite;
+}
+
+.paragraph2{
+    background-color: thistle;
+    border: 5px solid black;    
+}
+
+.paragraph3{
+    background-color: aquamarine;
+}
+
+.paragraph4{
+    background-color: wheat;
+}
+
+.paragraph5{
+    background-color: violet;
+}
+
+.note{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.image{
+    align-self: center;
+    position:sticky;
+    left: 2%;
+    width: 95%;
+    border-radius: 10px;
+}
+
+.content{
+    display: block;
+    background-origin: padding-box;
+    background-color: rgba(200, 50, 200, 0.5);
+    user-select: none;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 80%;
+    right: 0;
+}
+
+.header{
+    text-align: center;
+    background-color: aqua;
+}
+
+.button1{
+    margin: 0px;
+    border: 0px;
+    padding: 3px;
+    position: absolute;
+    display: block;
+    right: 2.5%;
+}
+
+.backgroung{
+    background-image: url("/img/lights600x400.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* bottom: 7%;  */
+}
+
+.autorisation{
+    padding: 10px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: -20px;
+    left: 80%; 
+}
+
+.galleryimage{
+    width: 800px;
+    height: 450px;
+}
+
+.border7px{
+    border: 7px solid;
+}
+
+h1{
+    color: aqua;
+}
+/* 
+h1:hover{
+    color: transparent;
+} */
+
+footer{
+    background-color: rgb(78, 78, 78);
+    position: fixed;
+    top: 93%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+li{
+    color: brown;
+}
+
+td{    
+    color: aliceblue;
+    background-color: aqua;
+}
+
+dd{
+    color: blue;
+}
+
+dt{
+    font-weight: 1000;
+    color: red;
+}
+
+br{
+    line-height: 200%;
+}

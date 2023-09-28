@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tasks page</title>
+        <link rel="shortcut icon" href="/img/lights600x400.jpg" type="image/jpg">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=opera">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body id="a" style="background-color: rgb(0, 0, 0);">
+
+        <div>
+            <button onclick="reduceFontSize()">Reduce font size</button>
+            <button onclick="increaseFontSize()">Increase font size</button>
+            <button id="ChangeBgColorButton" onclick="ChangeBgColor()">Change bg color</button>
+            <button onclick="ChangeBgColorAndSize()">Change bg color and size</button>
+            <br>
+            <div style="width: 200px; height: 10px; background-color: red;"></div>
+            <button onclick="ChangeRGBvalues(0, 10)">Increase</button>
+            <button onclick="ChangeRGBvalues(0, -10)">Degrease</button>
+            <br>
+            <div style="width: 200px; height: 10px; background-color: green;"></div>
+            <button onclick="ChangeRGBvalues(1, 10)">Increase</button>
+            <button onclick="ChangeRGBvalues(1, -10)">Degrease</button>
+            <br>
+            <div style="width: 200px; height: 10px; background-color: blue;"></div>
+            <button onclick="ChangeRGBvalues(2, 10)">Increase</button>
+            <button onclick="ChangeRGBvalues(2, -10)">Degrease</button>
+        </div>
+        <br><br><br><br>
+        
+        <input type="email" placeholder="email">
+        <input type="tel" placeholder="tel">
+        <br><br>
+
+        <a href="index.html" style="font-size: large;">go back</a> 
+        <br>
+
+        <input type="number" id="valueIF">
+        <button onclick="x()">Calculate</button>
+        <p id="text"></p>
+
+        <div>
+            <select>
+                <option>Airsoft</option>
+                <option>Volleyball</option>
+                <option>DnD</option>
+            </select>
+
+            <details>
+                <summary>My hobbyies</summary>
+                <ol>
+                    <li>Airsoft</li>
+                    <li>Volleyball</li>
+                    <li>DnD</li>
+                </ol>
+            </details>
+        </div>
+
+
+        <form>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat reiciendis labore tempora ex harum optio quod officia molestiae dolore ratione assumenda adipisci doloribus veritatis asperiores, quos atque nemo, perferendis exercitationem?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam eligendi corrupti, iste molestias placeat magnam molestiae assumenda quia at nemo voluptas atque ea vel, dolore repellat laboriosam ducimus. Tenetur, magnam.
+            Quaerat nihil quibusdam at eum numquam nulla voluptates vitae aliquam sunt, porro dicta voluptate temporibus eveniet delectus rem fuga aspernatur tempora illo neque dolores reprehenderit illum necessitatibus odio. Deleniti, laborum?
+            Rem mollitia aspernatur est. Iste architecto aspernatur quod aperiam eaque dignissimos voluptas esse cumque molestias, labore reprehenderit quo vel libero perspiciatis voluptates obcaecati exercitationem fuga qui aliquam tempore quibusdam! Quia.
+            Rerum quia incidunt aut dolorum, aspernatur numquam impedit, nesciunt debitis accusamus, blanditiis veritatis optio corrupti similique possimus saepe? Placeat quaerat minus rem, nostrum iure nisi fugit quasi vitae consequatur laboriosam!
+            Obcaecati repellendus explicabo deleniti quia distinctio architecto nulla non suscipit provident quaerat omnis harum ipsam vitae debitis consequuntur, aliquam hic incidunt? Totam ducimus impedit pariatur dolorum quod ad delectus. Neque.
+            A magni eos nam eius illo pariatur excepturi explicabo minima obcaecati cumque alias quo inventore quibusdam soluta dignissimos laborum, temporibus repellat animi culpa deserunt. Quod repellendus eligendi soluta ab iure?
+            Minus praesentium earum nostrum dicta maiores inventore dolor ullam. Soluta veniam adipisci praesentium aspernatur sunt id cupiditate atque reprehenderit saepe! Saepe odio perferendis dolor nesciunt qui enim vel atque explicabo.
+            Mollitia sunt, doloribus blanditiis ipsum molestias quidem suscipit. Nihil magnam provident est obcaecati cum, nisi iusto ab. Minima debitis earum, repellat soluta eos velit, modi reprehenderit, magni recusandae tempora similique!</p>
+        </form>
+
+        <br><br><br>
+
+        <figure>
+            <figcaption>Text</figcaption><img src="img/lights600x400.jpg" alt="text2" class="border7px" id="a1">
+        </figure>
+        <h1>Заголовок h1</h1>
+        <h2>Заголовок h2</h2>
+        <h3>Заголовок h3</h3>
+        <h4>Заголовок h4</h4>
+        <h5>Заголовок h5</h5>
+        <h6>Заголовок h6</h6>
+        <p>я пока не вижу накаой разницы между а и blockquote, что, кстати, грустно. НО мы не отчаеваемся, ибо чая у нас нет. А хотелось бы, на самом деле, ибо чай - всему голова. В мире Днд обязаны быть чайные элементали в качестве богов, отвечаю</p>
+        <blockquote>ну типа выделение очень длинных цитат. Вот сейчас и проверим, я хз, работает это или нет, но меня обещали угостить манговым чаем, так что я, в общем и целом, не против посидеть здесть N-ное время. НО НЕ ТРИ ЖЕ ЧАСА, БЛЯТ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam fuga totam, quibusdam dolorum doloribus aliquid a nisi rem. Voluptate eaque perferendis alias odio nulla eligendi dolorum esse animi rem illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero porro reprehenderit, quae quas harum accusamus ratione nulla earum delectus recusandae soluta. Dignissimos beatae libero, quam nulla debitis dolor delectus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis consequatur consequuntur nam repellendus, placeat nulla esse beatae doloremque cumque similique dicta error praesentium repudiandae, dolor earum eaque enim voluptate facere.</blockquote>
+        <pre>ну теперь черёд                         "Форматированного текста", я, кстати, понятия не имею, чем он отличается от обычного, но надо выяснить. 
+            Кстати! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et facere accusamus. Nam repellendus mollitia veniam nulla commodi, voluptatum ratione, nisi quam eaque fugiat, nostrum tenetur quas repudiandae omnis modi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium nihil est mollitia facilis a, quo labore veritatis totam suscipit recusandae dicta magnam optio minus obcaecati inventore deserunt beatae ut cumque.</pre>
+        <p>а вот теперь неформатированный для сравнения: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga est ipsum nemo provident hic id reprehenderit quisquam, earum quam quibusdam, fugit inventore. Magnam dolorem accusantium earum ratione nulla omnis quo! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque modi reprehenderit eveniet ratione tempore porro mollitia reiciendis doloremque error dignissimos. Ipsum quae culpa laborum laudantium omnis aut nostrum nihil aperiam?</p>
+
+        <p>BG color</p>
+        <input id="z1" type="color" list="colors">
+        <button onclick="document.getElementById('a').style.background = document.getElementById('z1').value">Accept BG color</button>
+    
+        <p>Border color</p>
+        <input id="z2" type="color" list="colors">
+        <button onclick="document.getElementById('a1').style.borderColor = document.getElementById('z2').value">Accept border color</button>
+
+        <p>Font color</p>
+        <input id="z3" type="color" list="colors">
+        <button onclick="document.getElementById('a').style.color = document.getElementById('z3').value">Accept font color</button>
+    
+        <datalist id="colors">
+            <option>#ff0000</option>
+            <option>#00ff00</option>
+            <option>#0000ff</option>
+            <option>#ffffff</option>
+            <option>#000000</option>
+        </datalist>
+        
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/pmA-G585Gnc?si=RGsi3R7ofrh2yH-T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        <script src="js/st.js"></script><br>
+    </body>
+</html>
