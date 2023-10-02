@@ -337,7 +337,7 @@ let enum_colors = { 1: ["#ff0000", "12px"],
                     3: ["#0000ff", "14px"] };
 
 let size = 12;
-document.getElementById("a").style.fontSize = `${size}px`;
+// document.getElementById("a").style.fontSize = `${size}px`;
 
 function reduceFontSize() {
     if(size > 8){
@@ -394,31 +394,26 @@ function ChangeRGBvalues(num, value){
 } 
 
 
-let video = {
-    set path(path) { 
-        
-        if(fetch(path) == null){
-            console.log('error: path is null');
-        }
-        else{
-            this.path = path;
-        }
-    },
-    width: 0,
-    height: 0
-}
-
-video.path = 'D:/unity/Unity Hub/Rasc/Library/PackageCache/com.unity.timeline@1.6.4/Samples~/Customization/Demo/Videos/Unitylogo.mp4'
 
 
 
-// let a = [-1, 2, 5, -6, 0, 7, 'Vano', 'Mary'];
-// for (let i = 0; i < a.length; i++) {
-//     if(!isNaN(a[i]) && a[i]>0){
-//         console.log(a[i]);
-//     }    
-// }
+// const mysql = require("mysql2");
 
+// const conn = mysql.createConnection({
+//     host: "localhost",
+//     user: "root",
+//     database: "site",
+//     password: "0209"
+// });
+
+// conn.connect(function(err){
+//     if(err){
+//         return console.log("No");
+//     }
+//     else{
+//         console.log("Ok")
+//     }
+// })   
 
 
 // npm install --save mysql2

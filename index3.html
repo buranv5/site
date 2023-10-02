@@ -106,8 +106,22 @@
             <option>#ffffff</option>
             <option>#000000</option>
         </datalist>
-        
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/pmA-G585Gnc?si=RGsi3R7ofrh2yH-T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <button onclick="
+            let cs = 0, ns = 0;
+            for(let i = 1; i < 101; i+=2){
+                ns+=i;
+            }
+            for(let i = 0; i < 101; i+=2){
+                cs+=i;
+            }
+            document.getElementById('7').innerText = `Рандомное число:${Math.round(Math.random()*100)};    сумма чётных:${cs};    сумма нечётных:${ns}`">
+        Вычислить</button>
+        <p id="7"></p>
 
         <script src="js/st.js"></script><br>
     </body>
