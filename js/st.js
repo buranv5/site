@@ -202,218 +202,228 @@
 
 // console.log(s);
 
-let m5 = [  [ 1,  2,  3,  4,  5],
-            [ 6,  7,  8,  9, 10],
-            [11, 12, 13, 14, 15],
-            [16, 17, 18, 19, 20],
-            [21, 22, 23, 24, 25] ]
+// let m5 = [  [ 1,  2,  3,  4,  5],
+//             [ 6,  7,  8,  9, 10],
+//             [11, 12, 13, 14, 15],
+//             [16, 17, 18, 19, 20],
+//             [21, 22, 23, 24, 25] ]
 
-function detOfMatrix(matrix){
-    console.log(matrix);
-    let det = 0;
-    if(matrix.length == 2){
-        det = matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0];
-    }
-    else {
-        let isPositive = true;
-        let sums = [];
-        for (let column = 0; column < matrix.length; column++) {
-            let newSumEl = matrix[0][column] * detOfMatrix(lowerMatrix(matrix, 0, column));
-            if (!isPositive) {
-                newSumEl *= -1;
-            }
-            sums.push(newSumEl);
-            isPositive = !isPositive;
-        }
-
-        for (let i = 0; i < sums.length; i++) {
-            det += sums[i];
-        }
-    }
-    return det;
-}
-
-function lowerMatrix(matrix, i, j){
-    let newMatrix = [];
-    for(let row = 0; row < matrix.length; row++){
-        let newRow = [];
-        if(row != i){
-            for(let column = 0; column < matrix.length; column++){
-                if(column != j){
-                    newRow.push(matrix[row][column]);
-                }
-            }
-        }
-        if(newRow.length != 0){
-            newMatrix.push(newRow);
-        }
-    }
-    return newMatrix;
-}
-
-let array3 = [  [1, 5, 3],
-                [7, 5, 6],
-                [7, 8, 5] ];
-
-// console.log(detOfMatrix(m5));
-
-
-// let mysql = require('mysql2');
-
-// const connection = mysql.createConnection({
-//     host: "localhost",
-//     user: "root",
-//     database: "site",
-//     password: "0209"
-// });
-
-// connection.connect(function (err) {
-//     if (err) {
-//         return console.error("Ошибка: " + err.message);
+// function detOfMatrix(matrix){
+//     console.log(matrix);
+//     let det = 0;
+//     if(matrix.length == 2){
+//         det = matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0];
 //     }
 //     else {
-//         console.log("Подключение к серверу MySQL успешно установлено");
+//         let isPositive = true;
+//         let sums = [];
+//         for (let column = 0; column < matrix.length; column++) {
+//             let newSumEl = matrix[0][column] * detOfMatrix(lowerMatrix(matrix, 0, column));
+//             if (!isPositive) {
+//                 newSumEl *= -1;
+//             }
+//             sums.push(newSumEl);
+//             isPositive = !isPositive;
+//         }
+
+//         for (let i = 0; i < sums.length; i++) {
+//             det += sums[i];
+//         }
 //     }
-// });
+//     return det;
+// }
+
+// function lowerMatrix(matrix, i, j){
+//     let newMatrix = [];
+//     for(let row = 0; row < matrix.length; row++){
+//         let newRow = [];
+//         if(row != i){
+//             for(let column = 0; column < matrix.length; column++){
+//                 if(column != j){
+//                     newRow.push(matrix[row][column]);
+//                 }
+//             }
+//         }
+//         if(newRow.length != 0){
+//             newMatrix.push(newRow);
+//         }
+//     }
+//     return newMatrix;
+// }
+
+// let array3 = [  [1, 5, 3],
+//                 [7, 5, 6],
+//                 [7, 8, 5] ];
+
+// // console.log(detOfMatrix(m5));
 
 
-function checkName() {
-    if (document.getElementById("nameIF").value == "Admin") {
-        let pwd = document.getElementById("pwdIF").value;
-        if (pwd == "Admin") {
+// // let mysql = require('mysql2');
 
-            var fReader = new FileReader();
-            try {
-                fReader.readAsDataURL(document.getElementById("imgIF").files[0])
-                fReader.onloadend = function (event) {
-                    var avatar = document.getElementById("avatar");
-                    avatar.src = event.target.result;
-                    avatar.style.width = avatar.style.height = "200px"
-                }
-            }
-            catch { }
+// // const connection = mysql.createConnection({
+// //     host: "localhost",
+// //     user: "root",
+// //     database: "site",
+// //     password: "0209"
+// // });
 
-            document.getElementById("Autorisation").hidden = true;
-            document.getElementById("Welcome").hidden = false;
-        }
-        else {
-            document.getElementById("F*ck you").hidden = false;
-            document.getElementById("Wrong name").hidden = true;
-        }
-    }
-    else {
-        document.getElementById("F*ck you").hidden = true;
-        document.getElementById("Wrong name").hidden = false;
-    }
-}
-
-function addImage(){    
-    var list = document.getElementById("Collection");
-
-    var fReader = new FileReader();
-    fReader.readAsDataURL(document.getElementById("imgIF").files[0]);
-
-    fReader.onloadend = function(event){
-        var li = document.createElement(`LI`);
-        var src = event.target.result;
-        var img = document.createElement(`IMG`);
-        img.src = src;
-        img.classList.add("galleryimage");
-        li.appendChild(img);
-        list.appendChild(li);
-    }
-}
-
-function x(){
-    var x = Number(document.getElementById("valueIF").value);
-    document.getElementById("text").innerText = 
-    `${x}^2 = ${x*x}
-    ${x}^3 = ${x*x*x}`;
-}
+// // connection.connect(function (err) {
+// //     if (err) {
+// //         return console.error("Ошибка: " + err.message);
+// //     }
+// //     else {
+// //         console.log("Подключение к серверу MySQL успешно установлено");
+// //     }
+// // });
 
 
-let enum_colors = { 1: ["#ff0000", "12px"],
-                    2: ["#00ff00", "16px"],
-                    3: ["#0000ff", "14px"] };
+// function checkName() {
+//     if (document.getElementById("nameIF").value == "Admin") {
+//         let pwd = document.getElementById("pwdIF").value;
+//         if (pwd == "Admin") {
 
-let size = 12;
-// document.getElementById("a").style.fontSize = `${size}px`;
+//             var fReader = new FileReader();
+//             try {
+//                 fReader.readAsDataURL(document.getElementById("imgIF").files[0])
+//                 fReader.onloadend = function (event) {
+//                     var avatar = document.getElementById("avatar");
+//                     avatar.src = event.target.result;
+//                     avatar.style.width = avatar.style.height = "200px"
+//                 }
+//             }
+//             catch { }
 
-function reduceFontSize() {
-    if(size > 8){
-        size--;
-    }
-    document.getElementById("a").style.fontSize = `${size}px`;
-}
+//             document.getElementById("Autorisation").hidden = true;
+//             document.getElementById("Welcome").hidden = false;
+//         }
+//         else {
+//             document.getElementById("F*ck you").hidden = false;
+//             document.getElementById("Wrong name").hidden = true;
+//         }
+//     }
+//     else {
+//         document.getElementById("F*ck you").hidden = true;
+//         document.getElementById("Wrong name").hidden = false;
+//     }
+// }
 
-function increaseFontSize() {
-    if(size < 16){
-        size++;
-    }
-    document.getElementById("a").style.fontSize = `${size}px`;
-}
+// function addImage(){    
+//     var list = document.getElementById("Collection");
 
-let colorID = 0;
+//     var fReader = new FileReader();
+//     fReader.readAsDataURL(document.getElementById("imgIF").files[0]);
 
-function ChangeBgColor(){
+//     fReader.onloadend = function(event){
+//         var li = document.createElement(`LI`);
+//         var src = event.target.result;
+//         var img = document.createElement(`IMG`);
+//         img.src = src;
+//         img.classList.add("galleryimage");
+//         li.appendChild(img);
+//         list.appendChild(li);
+//     }
+// }
 
-    let colorsArr = ["#ff0000", "#00ff00", "#0000ff"];
-    if (colorID < colorsArr.length-1) {
-        colorID++;
-    } else {
-        colorID = 0;
-    }
-    document.getElementById("a").style.background = colorsArr[colorID];
-    document.getElementById("ChangeBgColorButton").style.background = colorsArr[colorID];
-}
+// function x(){
+//     var x = Number(document.getElementById("valueIF").value);
+//     document.getElementById("text").innerText = 
+//     `${x}^2 = ${x*x}
+//     ${x}^3 = ${x*x*x}`;
+// }
 
-function ChangeBgColorAndSize(){
+
+// let enum_colors = { 1: ["#ff0000", "12px"],
+//                     2: ["#00ff00", "16px"],
+//                     3: ["#0000ff", "14px"] };
+
+// let size = 12;
+// // document.getElementById("a").style.fontSize = `${size}px`;
+
+// function reduceFontSize() {
+//     if(size > 8){
+//         size--;
+//     }
+//     document.getElementById("a").style.fontSize = `${size}px`;
+// }
+
+// function increaseFontSize() {
+//     if(size < 16){
+//         size++;
+//     }
+//     document.getElementById("a").style.fontSize = `${size}px`;
+// }
+
+// let colorID = 0;
+
+// function ChangeBgColor(){
+
+//     let colorsArr = ["#ff0000", "#00ff00", "#0000ff"];
+//     if (colorID < colorsArr.length-1) {
+//         colorID++;
+//     } else {
+//         colorID = 0;
+//     }
+//     document.getElementById("a").style.background = colorsArr[colorID];
+//     document.getElementById("ChangeBgColorButton").style.background = colorsArr[colorID];
+// }
+
+// function ChangeBgColorAndSize(){
     
-    if (colorID < Object.keys(enum_colors).length) {
-        colorID++;
-    } else {
-        colorID = 1;
-    }    
+//     if (colorID < Object.keys(enum_colors).length) {
+//         colorID++;
+//     } else {
+//         colorID = 1;
+//     }    
 
-    document.getElementById("a").style.fontSize = enum_colors[colorID][1];    
-    document.getElementById("a").style.background = enum_colors[colorID][0];
-}
+//     document.getElementById("a").style.fontSize = enum_colors[colorID][1];    
+//     document.getElementById("a").style.background = enum_colors[colorID][0];
+// }
 
-function ChangeRGBvalues(num, value){
-    let str = document.getElementById("a").style.backgroundColor;
-    str = str.slice(4, 11);
-    let rgb = str.split(',');
-    for (let i = 0; i < rgb.length; i++) {
-        rgb[i] = Number(rgb[i]);
+// function ChangeRGBvalues(num, value){
+//     let str = document.getElementById("a").style.backgroundColor;
+//     str = str.slice(4, 11);
+//     let rgb = str.split(',');
+//     for (let i = 0; i < rgb.length; i++) {
+//         rgb[i] = Number(rgb[i]);
+//     }
+//     rgb[num]+=value;
+//     str = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`
+//     document.getElementById("a").style.backgroundColor = str;
+//     console.log(rgb + "    " + document.getElementById("a").style.backgroundColor +
+//                 "    " + (str === document.getElementById("a").style.backgroundColor))
+// } 
+
+// let sum = 0;
+// for(let i = 1; true; i++){
+//     sum += 1/i;
+//     console.log(sum);
+// }
+
+
+
+
+
+// console.log("O567890sk");
+var i;
+
+import * as sql from  "../mysql2";
+
+
+const conn = sql.createConnection({
+    host: "localhost",
+    user: "root",
+    database: "site",
+    password: "0209"
+});
+
+conn.connect(function(err){
+    if(err){
+        return console.log("No");
     }
-    rgb[num]+=value;
-    str = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`
-    document.getElementById("a").style.backgroundColor = str;
-    console.log(rgb + "    " + document.getElementById("a").style.backgroundColor +
-                "    " + (str === document.getElementById("a").style.backgroundColor))
-} 
-
-
-
-
-
-// const mysql = require("mysql2");
-
-// const conn = mysql.createConnection({
-//     host: "localhost",
-//     user: "root",
-//     database: "site",
-//     password: "0209"
-// });
-
-// conn.connect(function(err){
-//     if(err){
-//         return console.log("No");
-//     }
-//     else{
-//         console.log("Ok")
-//     }
-// })   
+    else{
+        console.log("Ok");
+    }
+})   
 
 
 // npm install --save mysql2

@@ -9,10 +9,11 @@
             "server": "localhost",
             "port": 3306,
             "driver": "MySQL",
-            "name": "testcon",
+            "name": "site",
             "database": "site",
             "username": "root"
         }
     ],
-    "npm.autoDetect": "on"
+    "npm.autoDetect": "on",
+    "files.autoSave": "afterDelay"
 }

@@ -5,6 +5,8 @@ a{
 p{
     line-height: 100%;
     color: aliceblue;
+    margin: 10px;
+    
 }
 
 th{
@@ -71,6 +73,14 @@ th{
     right: 2.5%;
 }
 
+.colorbutton{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    width: 100px;
+    height: 50px;
+}
+
 .backgroung{
     background-image: url("/img/lights600x400.jpg");
     background-repeat: no-repeat;
@@ -80,12 +90,18 @@ th{
 }
 
 .autorisation{
+    color:aliceblue;
     padding: 10px;
     width: 300px;
     background-color: rgba(0, 0, 0, 0.4);
     position: fixed;
-    top: -20px;
+    top: 0px;
     left: 80%; 
+}
+
+.center{
+    width: 50px;
+    text-align: center;
 }
 
 .galleryimage{
@@ -98,12 +114,13 @@ th{
 }
 
 h1{
+    font-family: "Times New Roman";
     color: aqua;
 }
-/* 
+
 h1:hover{
-    color: transparent;
-} */
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 footer{
     background-color: rgb(78, 78, 78);
@@ -114,13 +131,24 @@ footer{
     right: 0;
 }
 
+#BG_changer #red button{
+    background-color: red;
+}
+
+#BG_changer #green button{
+    background-color: green;
+}
+
+#BG_changer #blue button{
+    background-color: blue;
+}
+
 li{
     color: brown;
 }
 
 td{    
     color: aliceblue;
-    background-color: aqua;
 }
 
 dd{

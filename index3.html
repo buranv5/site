@@ -9,24 +9,30 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body id="a" style="background-color: rgb(0, 0, 0);">
-
-        <div>
-            <button onclick="reduceFontSize()">Reduce font size</button>
-            <button onclick="increaseFontSize()">Increase font size</button>
-            <button id="ChangeBgColorButton" onclick="ChangeBgColor()">Change bg color</button>
-            <button onclick="ChangeBgColorAndSize()">Change bg color and size</button>
+        <H1>TEST</H1>
+        <button onclick="reduceFontSize()">Reduce font size</button>
+        <button onclick="increaseFontSize()">Increase font size</button>
+        <button id="ChangeBgColorButton" onclick="ChangeBgColor()">Change bg color</button>
+        <button onclick="ChangeBgColorAndSize()">Change bg color and size</button>
+        <br><br><br>
+        <div id="BG_changer">
+            <div id="red">
+                <div style="width: 200px; height: 10px; background-color: red;"></div>
+                <button onclick="ChangeRGBvalues(0, 10)">Increase</button>
+                <button onclick="ChangeRGBvalues(0, -10)">Degrease</button>
+            </div>
             <br>
-            <div style="width: 200px; height: 10px; background-color: red;"></div>
-            <button onclick="ChangeRGBvalues(0, 10)">Increase</button>
-            <button onclick="ChangeRGBvalues(0, -10)">Degrease</button>
+            <div id="green">
+                <div style="width: 200px; height: 10px; background-color: green;"></div>
+                <button onclick="ChangeRGBvalues(1, 10)">Increase</button>
+                <button onclick="ChangeRGBvalues(1, -10)">Degrease</button>
+            </div>
             <br>
-            <div style="width: 200px; height: 10px; background-color: green;"></div>
-            <button onclick="ChangeRGBvalues(1, 10)">Increase</button>
-            <button onclick="ChangeRGBvalues(1, -10)">Degrease</button>
-            <br>
-            <div style="width: 200px; height: 10px; background-color: blue;"></div>
-            <button onclick="ChangeRGBvalues(2, 10)">Increase</button>
-            <button onclick="ChangeRGBvalues(2, -10)">Degrease</button>
+            <div id="blue">
+                <div style="width: 200px; height: 10px; background-color: blue;"></div>
+                <button onclick="ChangeRGBvalues(2, 10)">Increase</button>
+                <button onclick="ChangeRGBvalues(2, -10)">Degrease</button>
+            </div>
         </div>
         <br><br><br><br>
         

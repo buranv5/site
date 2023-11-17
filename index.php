@@ -3,28 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>php?</title>
+    <title>php</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="backgroung">
+    <div> 
+        <div id="Autorisation" class="autorisation">
+            <h2>Log in</h2>
+            <form action="" method="POST">
+                <p id="Wrong name" <?php if(intval($incorrectPwd) != 1) echo'hidden="true"';?> >Wrong name</p>
+                <p>Name: <input type="text" required name="nameIF"/></p>
+                <p id="F*ck you" <?php if(intval($incorrectName) != 1) echo'hidden="true"';?> >Wrong password</p>
+                <p>Password: <input type="text" required name="pwdIF"/></p>
+                <br>
+                <input type="submit" value='Enter'>
+                <br>
+                <a href="/registration.php">Log up</a>
+                <br>
+                <br>
+                <a href="/tasks.php">Go to tasks</a>
+            </form>
+        </div>
+    <div> 
 
-    <?php
-    $conn = new mysqli("localhost", "root", "0209", "site");
-    // $db = new mysqli("host", "login", "password", "name_db");
+    <?php    
+    echo "<button onclick=".'"'."window.location.href='newRecord.php'".'"'.">Add new record</button><br><br>";
+
+    $userName = $_POST["nameIF"];
+    $userPwd = $_POST["pwdIF"];
+    $IdToDelete = $_POST["IdToDelete"];
 
 
-    $query = "desc users";
-    $result = $conn->query($query);
-    $masss = $result->num_rows;
+    $incorrectName = true;
+    $incorrectPwd = true;
+    $conn = new mysqli("localhost", "root", "0209", "world");
+    //$conn = new mysqli("host", "login", "password", "name_db");
 
-        for ($j = 0; $j < $masss; $j++) {
-            $result->data_seek($j);
-            $mass = $result->fetch_array(MYSQLI_NUM);
-            echo $mass[0]." ".$mass[1]."<br>";
+    if(intval($IdToDelete) != 0){
+        // $IdToDelete = intval($IdToDelete);
+        $query = "delete from city where ID = $IdToDelete;";
+        $result = $conn->query($query);
+    }
+
+    if ($userName != "" && !$userPwd == "") {
+
+        if($userName == "admin" && $userPwd == "admin"){ 
+            $query = "desc fullycity;";
+            $result = $conn->query($query);
+
+            echo"<div style='margin: 2px 5px;'>";
+            
+            while ($row = $result->fetch_row()) {
+                    echo "<input class='center' type='text' value='$row[0]'>  ";
+            }     
+            echo"</div><br>";
+        
+            $query = "select * from fullycity;";
+            $result = $conn->query($query);   
+
+            while ($row = $result->fetch_row()) {
+                    echo"<div style='margin: 2px 5px;'>";
+                    for ($i = 0; $i < count($row); $i++) {
+                        echo "<input class='center' type='text' value='$row[$i]'>  ";
+                }
+                echo"</div>";
+            }    
         }
+        elseif($userName == "admin1" && $userPwd == "admin1"){
+            echo "<table  border='1'>";
+            $query = "desc fullycity;";
+            $result = $conn->query($query);
+            
+            echo"<tr>";
+            
+            while ($row = $result->fetch_row()) {
+                    echo "<th>$row[0]</th> ";
+            }     
+                echo"</tr>";
+        
+            $query = "select * from fullycity;";
+            $result = $conn->query($query);
+            
+            while ($row = $result->fetch_row()) {
+                echo"<tr>";
+                for ($i = 0; $i < count($row); $i++) {
+                    echo "<td>$row[$i]</td>";
+                }
+                echo "<td><form method='POST' action='tasks.php'><input name='ID' type='text' value='$row[0]' hidden='true'><input type='submit' value='Show details'></form></td>";
+                echo "<td><form method='POST' action='index.php'><input name='IdToDelete' type='text' value='$row[0]' hidden='true'><input type='submit' value='Delete record'></form></td>";
+                
+                echo"</tr>";
+            }    
+            echo "</table>";
+        }
+        
+    }
+
+    
+    ?>
+
+    
 
 
-    //     $field1 = $_POST['field1'];
+<?php
 
+    //$field1 = $_POST['field1'];
     //     $field2 = $_POST['field2'];
     //     echo <<<_END
     // <form align="center" action="index.php" method="post" id="form2">
@@ -81,7 +164,6 @@
     // <input type="submit" value="запись"> 
     // </pre> </form>
     // _END;
-    ?> <div id="form3">   <?php
     //     $query = "SELECT * FROM books";
     //     $result = $conn->query($query);
     //     $masss = $result->num_rows;
@@ -109,8 +191,8 @@
     //     }
     //     $result->close();
     //     $conn->close();
-    ?>
-    </div>
+    
+?>
 
 </body>
 
