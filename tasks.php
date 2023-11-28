@@ -17,17 +17,11 @@
                         echo"<p>$row[$i]</p>";
                     }
                 }
-
-                // for($r = 0; $r<255; $r++){
-                //     echo "<button class='colorbutton' style='background-color: rgb($r, $r, $r)'></button>";
-                // }
-                    
-                
-
-                // for($i = 0; $i<255; $i++){
-                //     $u = 255-$i;
-                //     echo "<button class='colorbutton' style='background-color: rgb($i, 0, $u)'></button>";
-                // }
             ?>
+            
+        <form enctype="multipart/formdata" method="post" action="profile.php">
+                <p><input type="file" name="file"></p>
+                <p><input type="submit" value="Отправть"><p>
+        </form>
     </body>
 </html>
